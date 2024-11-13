@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    const arrowFunc = (sumUAN, currencyValues, exchangeCurrency)=>{
+        let chosenCurrency ;
+        for (const item of currencyValues) {
+            if (item.currency === exchangeCurrency) {
+                chosenCurrency = item;
+            }
+        }
+
+         return  sumUAN/chosenCurrency.value;
+    }
+
+
+    console.log(arrowFunc(10000, [{currency: 'USD', value: 40}, {currency: 'EUR' ,value: 43}],'USD'));
+</script>
+</body>
+</html>
